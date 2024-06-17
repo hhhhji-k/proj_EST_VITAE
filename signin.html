@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0px, padding:0px; box-sizing: border-box;}
+
+
+        #fieldset{
+            width: 500px;
+            font-weight: bold;
+            background-color: white;
+            border: 3px solid #C70039;
+            padding: 15px 20px 10px;
+        }
+        
+        
+        button{
+            border: 1px solid #C70039 ;
+            padding: 3px 20px;
+            margin: 5px;
+        }
+
+    #login, #reset, #signup{
+    background-color: #C70039;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 5px 20px;
+    margin: 5px;
+}
+
+    #signup{
+        float: right;
+    }
+
+    #point1{
+        position: absolute;
+        top: 25px;
+        left: 150px;
+    }
+
+    #point2{
+        position: absolute;
+        top: 38px;
+        left: 150px;
+    }
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <!-- JS시작 -->
+<script>
+    // basic 유효성검사
+    function submit_chk(){
+            var reg1 = /^[0-9a-z]{6,16}$/;  
+            var reg2 = /^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[^0-9A-Za-z]).{6,}$/;
+
+            var id = document.getElementById("id");
+            var passwd = document.getElementById("passwd");
+
+            var result1 = reg1.test(id.value);
+            var result2 = reg2.test(passwd.value);
+
+            if(!result1){
+                alert("ID error!");
+                id.value="";
+                id.focus();
+                return false;
+
+            }else if(!result2){
+                alert("password error!");
+                passwd.value="";
+                passwd.focus();
+                return false;
+            }
+        }
+    
+    // reset 
+    function reset_chk(){
+               var result = confirm("확인 버튼을 누르면 초기화 합니다");
+               if(result){
+                return true;
+               }
+            }
+            
+    //느낌표 mouseonclick
+    function Hint1(){
+        alert("아이디는 길이 6~16자의 알파벳 소문자와 숫자입니다")
+    }
+
+    function Hint2(){
+        alert("패스워드는 최소 6자이며, 최소 하나의 알파벳 대문자/소문자, 특수기호를 포함합니다")
+    }
+
+
+
+    </script>
+
+
+    <form action="#" method="post" name="essential" 
+         onsubmit="return submit_chk()"  onreset="return reset_chk()">
+
+
+    <div class="page">
+        <fieldset id="fieldset">
+                <legend>SIGN IN</legend>
+            <div class="basic">
+                <table>
+                    <tr>
+                        <td>ID :</td>
+                        <td><input type="text" name="id" id="id"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td> password :</td>
+                        <td><input type="password" name="passwd" id="passwd"></td>
+                    </tr>
+                  
+                </table>
+                      <div id="point1" onclick="Hint1()">
+                            <img src="point.png" width="20px" id="point1">
+                      </div>
+                      <div id="point2" onclick="Hint2()">
+                        <img src="point.png" width="20px" id="point2">
+                  </div>
+            <br>
+            </div>
+
+        <input type="submit" id="login" value="login">
+        <input type="reset" id="reset" value="reset">
+
+        <button onclick="location.href='signup.html'" id="signup">Sing up</button></a>
+        </fieldset>   
+                            
+    </div>
+
+
+
+
+</body>
+</html>
+
