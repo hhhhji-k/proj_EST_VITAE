@@ -3,6 +3,7 @@ ul{list-style: none;}
 li{list-style-type: none;}
 a{text-decoration: none;}
 
+
 #page{
     margin: 0;
     padding: 0;
@@ -128,34 +129,42 @@ section{
 }
 
 .cro-container{
-    width: 100%;
-    
+    width: 90%;
+    height: auto;
+    margin: 0 ;
 }
   
 
 #cro{
-    box-sizing: border-box;
+ padding-top: 50px;   
 }
 
 
 #cro img{
-    position: relative;
-   width: 30%;
-   margin: 50px 65px;
+   width: 33%;
+   margin-left: 60px;
+   margin-bottom: 50px;
+   
+
 }
 
-.text-cro{ 
-    background-color: white;
+.text-cro{     
+    position: absolute;
+    top: 1752px;
+    left: 550px;
     
+    width: 56%;
     text-align: center;
-    margin: 0 65px 0;
-    padding-left: 300px;
-    }
+    background-color: white;
+    margin-left: 60px;
+    padding: 60px 0px;
+}
+
 
 .cro-container input[type=button]{
     background-color: #C70039;
     color: white;
-    border: none;
+    border: 1px solid #C70039; 
     font-weight: bold;
     padding: 10px 40px;
     margin: 20px;
