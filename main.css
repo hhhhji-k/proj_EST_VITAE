@@ -72,8 +72,9 @@ header{
 section{
     width: 90%;
     height: auto;
-    margin: 0 auto; /* 수평 가운데 정렬 */
+    margin: 0px auto; /* 수평 가운데 정렬 */
     background-color: #f5f5f5;
+    padding-bottom: 80px;
 }
 
 #cof{
@@ -128,36 +129,32 @@ section{
     margin: 20px;
 }
 
-.cro-container{
-    width: 90%;
+.cro-section{
+    width: 93%;
     height: auto;
-    margin: 0 ;
+    margin: 0 auto;
 }
   
 
-#cro{
- padding-top: 50px;   
+.text-cro{
+    background-color: white;
+    margin-top: 20px;
+    padding:10px;
 }
 
 
 #cro img{
    width: 33%;
-   margin-left: 60px;
-   margin-bottom: 50px;
-   
-
+   float: left;
+   margin-bottom: 20px;
 }
 
 .text-cro{     
-    position: absolute;
-    top: 1752px;
-    left: 550px;
-    
-    width: 56%;
     text-align: center;
-    background-color: white;
-    margin-left: 60px;
-    padding: 60px 0px;
+    padding-top: 43px;
+    padding-right: auto;
+    padding-bottom: 40px;
+    padding-left: 100px;   
 }
 
 
